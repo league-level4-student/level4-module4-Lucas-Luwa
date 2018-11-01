@@ -1,16 +1,34 @@
 package _04_hospital;
 
-public class Hospital extends Doctor{
-	Doctor 
+import java.util.ArrayList;
+import java.util.Stack;
+
+public class Hospital extends Doctor {
+	ArrayList<Doctor> manydoctors = new ArrayList<Doctor>();
+	ArrayList<Patient> manypatients = new ArrayList<Patient>();
+
 	public static void main(String[] args) {
 
 	}
 
-	public static void addDoctor() {
+	public void addDoctor(Doctor doc) {
+		manydoctors.add(doc);
+	}
 
-		
+	public ArrayList getDoctors() {
+		return manydoctors;
 	}
-	public static void getDoctors() {
-		
+
+	public void addPatient(Patient pats) {
+		manypatients.add(pats);
 	}
+
+	public ArrayList getPatients() {
+		return manypatients;
+	}
+
+	public void assignPatientsToDoctors() {
+
+	}
+
 }
