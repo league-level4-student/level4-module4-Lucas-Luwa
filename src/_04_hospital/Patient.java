@@ -4,7 +4,6 @@ public class Patient {
 	boolean care = false;
 
 	public static void main(String[] args) {
-
 	}
 
 	public boolean feelsCaredFor() {

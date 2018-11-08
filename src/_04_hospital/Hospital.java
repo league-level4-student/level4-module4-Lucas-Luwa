@@ -6,6 +6,7 @@ import java.util.Stack;
 public class Hospital extends Doctor {
 	ArrayList<Doctor> manydoctors = new ArrayList<Doctor>();
 	ArrayList<Patient> manypatients = new ArrayList<Patient>();
+	Doctor d = new Doctor();
 
 	public static void main(String[] args) {
 
@@ -28,7 +29,15 @@ public class Hospital extends Doctor {
 	}
 
 	public void assignPatientsToDoctors() {
-
+		int docCount = 0;
+		int i;
+		for (i = 0; i < manypatients.size(); i++) {
+			try {
+				manydoctors.get(docCount).assignPatient(manypatients.get(i));
+			} catch (DoctorFullException dfe) {
+				docCount++;
+				i -= 1;
+			}
+		}
 	}
-
 }

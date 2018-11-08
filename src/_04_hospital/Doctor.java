@@ -17,7 +17,10 @@ public class Doctor {
 		return false;
 	}
 
-	public void assignPatient(Patient pat) {
+	public void assignPatient(Patient pat) throws DoctorFullException {
+		if (listofpatients.size() == 3) {
+			throw new DoctorFullException();
+		}
 		listofpatients.add(pat);
 	}
 
