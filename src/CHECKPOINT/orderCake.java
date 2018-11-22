@@ -9,7 +9,11 @@ public class orderCake extends Cake {
 	ArrayList<Cake> cake = new ArrayList<Cake>();
 
 	public static void main(String[] args) {
-
 	}
 
+	@Override
+	public double calcPrice() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }
